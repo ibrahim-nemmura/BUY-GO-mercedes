@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    tools:context=".WelcomeFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Welcome back"
+        android:id="@+id/welcomeMessage"
+        android:textColor="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp" />
+    <TextView
+        android:layout_below="@+id/welcomeMessage"
+        android:id="@+id/welcomeNumber"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        tools:text="+919607583080"
+        android:textSize="20sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="It's good to see you pal."
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Let's Go!"
+        android:id="@+id/letsGoButton"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginBottom="20dp"/>
+
+
+</RelativeLayout>

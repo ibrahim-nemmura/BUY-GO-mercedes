@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="450dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CategoryFragment"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#B5A8A9C5"
+    android:gravity="center">
+
+    <TextView
+        style="@style/AppTheme.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Filters" />
+
+    <!-- Branches -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:id="@+id/icon_branch"
+            style="@style/AppTheme.FilterIcon"
+            android:layout_centerVertical="true"
+            android:tint="@color/greySecondary"
+            app:srcCompat="@drawable/factory" />
+
+        <Spinner
+            android:id="@+id/spinnerBranchCategory"
+            style="@style/AppTheme.FilterSpinner"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/icon_branch"
+            android:entries="@array/branch" />
+
+    </RelativeLayout>
+
+    <!-- Year -->
+    <RelativeLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:id="@+id/icon_year"
+            style="@style/AppTheme.FilterIcon"
+            android:layout_centerVertical="true"
+            android:tint="@color/greySecondary"
+            app:srcCompat="@drawable/year" />
+
+        <Spinner
+            android:id="@+id/spinnerYearCategory"
+            style="@style/AppTheme.FilterSpinner"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/icon_year"
+            android:entries="@array/year" />
+
+    </RelativeLayout>
+
+    <!-- Price -->
+    <RelativeLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:id="@+id/icon_subject"
+            style="@style/AppTheme.FilterIcon"
+            android:layout_centerVertical="true"
+            android:tint="@color/greySecondary"
+            app:srcCompat="@drawable/microscope" />
+
+        <Spinner
+            android:id="@+id/spinnerSubjectCategory"
+            style="@style/AppTheme.FilterSpinner"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/icon_subject"
+            android:entries="@array/first_year" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="back"
+            android:layout_weight="0.5"
+            android:id="@+id/backNameAndPic" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="next"
+            android:layout_weight="0.5"
+            android:id="@+id/nextComment"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

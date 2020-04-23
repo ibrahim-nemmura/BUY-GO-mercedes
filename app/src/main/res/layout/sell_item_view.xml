@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:padding="2dp">
+
+    <ImageView
+        android:id="@+id/bookImageSell"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#757575"
+        android:scaleType="centerCrop"
+        android:src="@drawable/food_1" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="0.6"
+    android:layout_gravity="start">
+    <TextView
+        android:id="@+id/bookNameItemSell"
+        style="@style/AppTheme.Subheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:textSize="20sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="Book's Name" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="8dp">
+    <TextView
+        android:id="@+id/bookYearSell"
+        style="@style/AppTheme.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/greySecondary"
+        tools:text="Year" />
+
+
+    <TextView
+        android:id="@+id/divider"
+        style="@style/AppTheme.TextDivider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/divider_bullet" />
+
+    <TextView
+        android:ellipsize="end"
+        android:id="@+id/bookBranchSell"
+        style="@style/AppTheme.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/greySecondary"
+        android:autoSizeTextType="uniform"
+        android:maxLines="1"
+        tools:text="Branch" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bookPublisherSell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publisher Name"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginStart="8dp"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="8dp">
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/RsTextSell"
+        style="@style/AppTheme.Caption"
+        android:text="Rs: "
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/bookPriceSell"
+        style="@style/AppTheme.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAlignment="textEnd"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"
+        tools:text="999.99" />
+</LinearLayout>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="end"
+        android:layout_marginRight="4dp">
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:visibility="gone"
+            android:id="@+id/editButtonSell"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:id="@+id/deleteButtonSell"/>
+
+
+    </LinearLayout>
+</LinearLayout>
+

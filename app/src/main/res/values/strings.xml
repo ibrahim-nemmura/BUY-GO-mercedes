@@ -1,0 +1,249 @@
+<resources>
+    <string name="app_name">Book Bird</string>
+    <string name="title_buy">BUY</string>
+    <string name="title_sell">SELL</string>
+
+
+    <!-- added from here -->
+
+
+    <string name="value_any_branch">All Branch</string>
+    <string name="value_any_year">All Years</string>
+    <string name="value_any_subject">All Subjects</string>
+    <string name="value_any_price">All Price Range</string>
+
+    <string name="price_1">0 - 200</string>
+    <string name="price_2">200 - 500</string>
+    <string name="price_3">500 - 1000</string>
+    <string name="price_4">1000 and above</string>
+
+
+    <string name="all_books">All Items</string>
+    <string name="header_filters">Filter</string>
+
+
+    <string name="sort_by_price_lth">Price low to high</string>
+    <string name="sort_by_price_htl">Price high to low</string>
+
+    <string name="sorted_by_price_lth">sorted by price low to high</string>
+    <string name="sorted_by_price_htl">sorted by price high to low</string>
+
+    <string name="divider_bullet">•</string>
+    <string name="apply">Apply</string>
+    <string name="cancel">Cancel</string>
+    <string name="message_no_results">Oops, couldn\'t find any results\nthat matched your filter</string>
+
+
+    <string name="all">All</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="terms_and_condition_applied">Terms and condition applied.</string>
+
+
+    <string-array name="branch">
+        <item>@string/value_any_branch</item>
+        <item>Computer</item>
+        <item>IT</item>
+        <item>Electrical</item>
+        <item>ENTC</item>
+        <item>Mechanical</item>
+        <item>Hotel Management</item>
+        <item>Medical</item>
+        <item>Other</item>
+
+    </string-array>
+    <string-array name="year">
+        <item>@string/value_any_year</item>
+        <item>1st Year</item>
+        <item>2nd Year</item>
+        <item>3rd Year</item>
+        <item>4th Year</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string-array name="prices">
+        <item>@string/value_any_price</item>
+        <item>@string/price_1</item>
+        <item>@string/price_2</item>
+        <item>@string/price_3</item>
+        <item>@string/price_4</item>
+
+
+    </string-array>
+
+    <string-array name="sort_by">
+        <item>@string/sort_by_price_lth</item>
+        <item>@string/sort_by_price_htl</item>
+    </string-array>
+    <string-array name="first_year">
+        <item>@string/all</item>
+        <item>CIVIL</item>
+        <item>BME</item>
+        <item>ELEC</item>
+        <item>BXE</item>
+        <item>M I</item>
+        <item>M II</item>
+        <item>EG</item>
+        <item>PHY</item>
+        <item>CHEM</item>
+        <item>MECH</item>
+    </string-array>
+
+    <string-array name="sec_comp">
+        <item>@string/all</item>
+        <item>DSA</item>
+        <item>ADS</item>
+        <item>Microprocessor</item>
+        <item>OOP</item>
+        <item>PPL</item>
+
+        <item>COA</item>
+        <item>DELD</item>
+        <item>DM</item>
+        <item>M III</item>
+        <item>CG</item>
+    </string-array>
+
+    <string-array name="forth_year">
+        <item>@string/all</item>
+    </string-array>
+
+
+    <string-array name="third_comp">
+        <item>@string/all</item>
+        <item>ISEE</item>
+        <item>SEPM</item>
+        <item>DBMS</item>
+        <item>CN</item>
+        <item>TOC</item>
+        <item>Computer Forensic and Cyber Application</item>
+        <item>Data Communication and Wireless Sensor</item>
+        <item>Digital Signal Processing Applications</item>
+        <item>Embedded Operating System</item>
+        <item>Opertaing System Designs</item>
+        <item>Web Technology</item>
+    </string-array>
+
+    <string-array name="sec_mech">
+        <item>@string/all</item>
+        <item>Applied Thermodynamics</item>
+        <item>Engineering Mathematics III</item>
+        <item>Engineering Metallurgy</item>
+        <item>Fluid Mechanics</item>
+        <item>Manufacturing Processes I</item>
+        <item>Material Science</item>
+        <item>Strength of Material</item>
+        <item>Theory of Machine I</item>
+        <item>Electrical and Electronic Engineering</item>
+        <item>Thermodynamics</item>
+
+    </string-array>
+
+
+    <string-array name="third_mech">
+        <item>@string/all</item>
+        <item>Design of Machine Element I</item>
+        <item>Design of Machine Element II</item>
+        <item>Heat Transfer</item>
+        <item>Hydraulic and Pneumatics</item>
+        <item>Manufacturing Process II</item>
+        <item>Mechatronics</item>
+        <item>Metrology and Quality Control</item>
+        <item>Numerical Methods and Optimization</item>
+        <item>Refrigerator and Air Condition</item>
+        <item>Theory of Machine II</item>
+        <item>Turbo Machines</item>
+    </string-array>
+    <string-array name="sec_it">
+        <item>@string/all</item>
+        <item>Computer Graphics</item>
+        <item>Computer Organization and Architecture</item>
+        <item>Data Structure and Files</item>
+        <item>Digital Electronics and Logic Design</item>
+        <item>Discrete Structures</item>
+        <item>Engineering Mathematics III</item>
+        <item>Fundamental of Comm and Computer Net</item>
+        <item>Fundamental of Data Structures</item>
+        <item>Problem Solving and OOP concept</item>
+        <item>Processor Architecture and Interfacing</item>
+    </string-array>
+
+    <string-array name="third_it">
+        <item>@string/all</item>
+        <item>Cloud Computing</item>
+        <item>Comuter Network Technology</item>
+        <item>Data science and Big Data Analytics</item>
+        <item>Database Management System</item>
+        <item>Human Computer Interaction</item>
+        <item>Information Technology Project Management</item>
+        <item>Multimedia Technology</item>
+        <item>Operating Systems</item>
+        <item>Software Engineering</item>
+        <item>Systems Programming</item>
+        <item>Theory of Computation</item>
+        <item>Web Engineering and Technology</item>
+    </string-array>
+    <string-array name="sec_entc">
+        <item>@string/all</item>
+        <item>Analog Communication</item>
+        <item>Computer Organisation</item>
+        <item>Control System</item>
+        <item>Data Structure and Algorithms</item>
+        <item>Digital Electronics</item>
+        <item>Electrical Circuits and Machines</item>
+        <item>Electronics Devices and Circuits</item>
+        <item>Engineering Mathematics III</item>
+        <item>Integrated Circuit</item>
+    </string-array>
+
+    <string-array name="third_entc">
+        <item>@string/all</item>
+        <item>Advanced Processors</item>
+        <item>Antenna And Wave Propagation</item>
+        <item>Business Management</item>
+        <item>Digital Communication</item>
+        <item>Digital Signal Processing</item>
+        <item>Electromagnetic and Transmission lines</item>
+        <item>Embedded Processors</item>
+        <item>Industrial Management</item>
+        <item>Information Theory and Coding Tech</item>
+        <item>Mechatronics</item>
+        <item>Microcontroller and Applications</item>
+        <item>Power Electronics</item>
+        <item>System Programming and Operating System</item>
+    </string-array>
+    <string-array name="sec_elec">
+        <item>@string/all</item>
+        <item>Analog and Digital Electronics</item>
+        <item>Electrical Machines I</item>
+        <item>Electrical Measurements and Instrumentation</item>
+        <item>Engineering Mathematics III</item>
+        <item>Fundamental Of Microprocessor And Microcontroller</item>
+        <item>Material Science</item>
+        <item>Network Analysis</item>
+        <item>Numerical Methods And Computer</item>
+        <item>Power Generation Technology</item>
+        <item>Power System I</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="third_elec">
+        <item>@string/all</item>
+        <item>Advanced Microcontroller and Its Application</item>
+        <item>Control System I</item>
+        <item>Design of Electrical Machines</item>
+        <item>Electrical Insta. Maintenance And Testing</item>
+        <item>Electrical Machine II</item>
+        <item>Energy Audit and Management</item>
+        <item>Industrial and Technology Management</item>
+        <item>Power Electronics</item>
+        <item>Power System II</item>
+        <item>Utilization of Electrical Energy</item>
+    </string-array>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    tools:context=".ProfileFragmentName">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp">
+
+
+        <EditText
+            android:id="@+id/newProfileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:singleLine="true"
+            android:background="@drawable/round_corner"
+            android:hint="Name"
+            android:maxLines="1"
+            android:nextFocusDown="@id/profileGender"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_gravity="start"
+                android:id="@+id/profileGender"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:nextFocusDown="@id/profileAge"
+                android:entries="@array/gender"/>
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Age"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusForward="@id/profilePincode"
+                android:padding="5dp"
+                android:id="@+id/profileAge"
+                />
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="match_parent"
+                android:text="Pincode" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="000000"
+                android:inputType="number"
+                android:maxLength="6"
+
+                android:textSize="20dp"
+                android:nextFocusForward="@id/newProfileEmail"
+                android:id="@+id/profilePincode"
+                />
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/newProfileEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/round_corner"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:nextFocusDown="@id/newProfileCollege"
+            android:padding="10dp" />
+
+
+        <EditText
+            android:id="@+id/newProfileCollege"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/round_corner"
+            android:hint="College"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:nextFocusDown="@id/newProfileAddress"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/newProfileAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/round_corner"
+            android:hint="Address"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:nextFocusDown="@id/signupButton"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/signupButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="@color/colorPrimary"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="SIGN UP" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

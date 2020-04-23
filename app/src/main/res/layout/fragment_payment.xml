@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="40dp"
+        android:paddingTop="40dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter UPI ID"
+            android:layout_marginStart="10dp"
+            android:textSize="18dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/upiId"
+            android:background="@drawable/round_corner"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:layout_margin="10dp"
+            android:hint="9607583080@upi"/>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/saveUPI"
+            android:text="save and Proceed"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="@color/colorPrimary"/>
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

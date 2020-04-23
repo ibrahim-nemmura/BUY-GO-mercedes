@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="10dp"
+    android:clipToPadding="false"
+    android:padding="2dp">
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/bookImage"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/food_1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/sold_out"
+            android:id="@+id/sold_out"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/RsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs: "/>
+
+        <TextView
+            android:id="@+id/bookPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            tools:text="999.99" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000"
+            android:id="@+id/realPrice"/>
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/discountPer"
+            android:text="10"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%OFF"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginStart="5dp"
+        android:id="@+id/bookNameItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="Book's Name" />
+
+    <LinearLayout
+        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/bookYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/greySecondary"
+            tools:text="Year" />
+
+
+        <TextView
+            android:id="@+id/divider"
+            style="@style/AppTheme.TextDivider"
+            android:text="@string/divider_bullet" />
+
+        <TextView
+            android:id="@+id/bookBranch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/greySecondary"
+            tools:text="Branch"
+            android:maxLines="1"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginStart="5dp"
+        android:id="@+id/bookPublisher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="Publisher Name" />
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>
+

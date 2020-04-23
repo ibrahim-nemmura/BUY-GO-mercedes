@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context=".AddItemActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ProgressBar
+            android:id="@+id/addItemProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/itemImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:backgroundTint="#6773B4"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/cameraIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/photo_camera"
+                    android:scaleX="2"
+                    android:scaleY="2" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <EditText
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:drawableEnd="@drawable/ic_mode_edit_black_24dp"
+                    android:hint="MRP           "
+                    android:inputType="number"
+                    android:maxLength="9"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <EditText
+                    android:id="@+id/discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_mode_edit_black_24dp"
+                    android:hint="Discount %"
+                    android:inputType="number" />
+
+                <LinearLayout
+                    android:id="@+id/actualPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Rs."
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/calPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        tools:text="1000" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/itemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:drawableEnd="@drawable/ic_mode_edit_black_24dp"
+                android:hint="Item Name" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp">
+
+                    <ImageView
+                        android:id="@+id/icon_branch"
+                        style="@style/AppTheme.FilterIcon"
+                        android:layout_centerVertical="true"
+                        android:tint="@color/greySecondary"
+                        app:srcCompat="@drawable/factory" />
+
+                    <Spinner
+                        android:id="@+id/spinnerBranchActivity"
+                        style="@style/AppTheme.FilterSpinner"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/icon_branch"
+                        android:entries="@array/branch" />
+
+                </RelativeLayout>
+
+                <!-- Year -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <ImageView
+                        android:id="@+id/icon_year"
+                        style="@style/AppTheme.FilterIcon"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_centerVertical="true"
+                        android:tint="@color/greySecondary"
+                        app:srcCompat="@drawable/year" />
+
+                    <Spinner
+                        android:id="@+id/spinnerYearActivity"
+                        style="@style/AppTheme.FilterSpinner"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/icon_year"
+                        android:entries="@array/year" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <ImageView
+                        android:id="@+id/icon_sort"
+                        style="@style/AppTheme.FilterIcon"
+                        android:layout_centerVertical="true"
+                        android:tint="@color/greySecondary"
+                        app:srcCompat="@drawable/microscope" />
+
+                    <Spinner
+                        android:id="@+id/spinnerSubjectActivity"
+                        style="@style/AppTheme.FilterSpinner"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/icon_sort"
+                        android:entries="@array/forth_year" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+
+                <EditText
+                    android:id="@+id/publisherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:drawableEnd="@drawable/ic_mode_edit_black_24dp"
+                    android:hint="Publisher" />
+
+                <EditText
+                    android:id="@+id/comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_mode_edit_black_24dp"
+                    android:hint="Comments:" />
+
+            </LinearLayout>
+
+            <!-- Cancel and apply buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/buttonCancel"
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/cancel"
+                    android:textColor="@color/greySecondary"
+                    android:theme="@style/ThemeOverlay.FilterButton" />
+
+                <Button
+                    android:id="@+id/buttonAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Add"
+                    android:theme="@style/ThemeOverlay.FilterButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

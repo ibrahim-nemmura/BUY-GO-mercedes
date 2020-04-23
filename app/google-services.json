@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "66231374321",
+    "firebase_url": "https://bookbird001.firebaseio.com",
+    "project_id": "bookbird001",
+    "storage_bucket": "bookbird001.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66231374321:android:5457809d4b850a8cc8f450",
+        "android_client_info": {
+          "package_name": "com.example.bookapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66231374321-45d2cu88afhgnik6ug1fnd3uror7hpar.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bookapp",
+            "certificate_hash": "13d3e0b4739b36ec7c25230a75245206498f3cc3"
+          }
+        },
+        {
+          "client_id": "66231374321-j88umf8u6itulkuh26npunh3qoad7bfi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBbuZc-ArdErOtYLtGwKRuhFQ99Wj8hSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66231374321-j88umf8u6itulkuh26npunh3qoad7bfi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
