@@ -11,11 +11,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/background_left"
-        android:text="hello"
-        android:layout_marginStart="5dp"
         android:padding="10dp"
-        android:textStyle="bold"
-        android:textSize="14sp"/>
+        android:text="hello"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/sender_message"

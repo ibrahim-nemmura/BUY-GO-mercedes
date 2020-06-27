@@ -1,7 +1,7 @@
 package com.example.bookapp;
 
 import adapter.MessageAdapter;
-import androidx.annotation.LongDef;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;

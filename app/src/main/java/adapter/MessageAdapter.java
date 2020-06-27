@@ -1,7 +1,6 @@
 package adapter;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import model.ChatMessage;
 
 import com.example.bookapp.R;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 
 import java.util.List;

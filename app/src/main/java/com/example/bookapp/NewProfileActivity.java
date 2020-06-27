@@ -4,14 +4,20 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import model.Profile;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.ImageDecoder;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.provider.MediaStore;
@@ -40,6 +46,9 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.Objects;
+import java.util.UUID;
 
 public class NewProfileActivity extends AppCompatActivity implements WelcomeFragment.OnWelcomeFragmentInteractionListener, ProfileFragmentName.OnFragmentInteractionListener, PaymentFragment.OnSaveUpiButtonPressedListener {
 
@@ -62,6 +71,8 @@ public class NewProfileActivity extends AppCompatActivity implements WelcomeFrag
     private String uid;
     private byte[] compressedImage;
     private SharedPreferences sharedPreferences;
+    private Bitmap selectedImage;
+
 
 
     @Override
@@ -81,6 +92,7 @@ public class NewProfileActivity extends AppCompatActivity implements WelcomeFrag
         sharedPreferences = getSharedPreferences(SP, MODE_PRIVATE);
 
 
+
         mStorageReference = FirebaseStorage.getInstance().getReference();
         db = FirebaseFirestore.getInstance();
         checkIfProfileExists();
@@ -95,27 +107,60 @@ public class NewProfileActivity extends AppCompatActivity implements WelcomeFrag
 
 
     private void getProfilePic() {
-        Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
-        galleryIntent.setType("image/*");
-        startActivityForResult(galleryIntent, 1);
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.READ_EXTERNAL_STORAGE},1);
+        }else{
+            Intent intentToGalery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            startActivityForResult(intentToGalery, 2);
+        }
+
+        /* Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(galleryIntent, 1);*/
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
+        if (requestCode == 1){
+            if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                Intent intentToGalery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(intentToGalery, 2);
+            }
+        }
+
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1 && resultCode == RESULT_OK) {
-            if (data != null) {
-                imageUri = data.getData(); // we have the actual path to the image
-                profilePic.setImageURI(imageUri);//show image
+
+        if (requestCode == 2 && resultCode == RESULT_OK && data != null){
+            imageUri = data.getData();
 
 
+
+            try {
+                if (Build.VERSION.SDK_INT >= 28){
+                    ImageDecoder.Source source = ImageDecoder.createSource(this.getContentResolver(), imageUri);
+                    selectedImage = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+                    profilePic.setImageBitmap(selectedImage);
+                }else{
+                    selectedImage = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+                    profilePic.setImageBitmap(selectedImage);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
+
         }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     private void uploadProfilePic()
     {
-        profilePic.setDrawingCacheEnabled(true);
+       profilePic.setDrawingCacheEnabled(true);
         profilePic.buildDrawingCache();
         Bitmap bitmap = ((BitmapDrawable) profilePic.getDrawable()).getBitmap();
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -157,7 +202,7 @@ public class NewProfileActivity extends AppCompatActivity implements WelcomeFrag
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(getApplicationContext(),"Something went wrong",Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(),"Something went wrong",Toast.LENGTH_LONG).show();
                                 }
                             });
                         }
@@ -176,44 +221,7 @@ public class NewProfileActivity extends AppCompatActivity implements WelcomeFrag
         }
     }
 
-    /*private void saveProfile() {
 
-        progressBar.setVisibility(ProgressBar.VISIBLE);
-
-        if (imageUri != null) {
-            final StorageReference filepath = mStorageReference.child("profile").child("profile_" + Timestamp.now().getSeconds());
-
-            filepath.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    filepath.getDownloadUrl().addOnSuccessListener(uri -> {
-                        profile.setProfilePic(uri.toString());
-                        db.collection("profile").document(uid).set(profile).addOnSuccessListener(aVoid -> {
-                            progressBar.setVisibility(ProgressBar.GONE);
-                            Toast.makeText(ProfileActivity.this.getApplicationContext(), "Welcome!", Toast.LENGTH_SHORT).show();
-
-                            editor.putBoolean(LOGGEDIN, true);
-                            editor.putString(USERID, uid);
-                            editor.putString(USERCONTACT, contact);
-                            editor.putString(USERNAME,profile.getProfileName());
-                            editor.commit();
-
-
-                            ProfileActivity.this.startActivity(new Intent(ProfileActivity.this, MainActivity.class));
-                        });
-                    });
-                }
-            }).addOnFailureListener(e -> {
-                progressBar.setVisibility(ProgressBar.GONE);
-                Toast.makeText(getApplicationContext(), "Please try again...", Toast.LENGTH_SHORT).show();
-            }).addOnProgressListener(taskSnapshot -> {
-                double progress = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
-                progressBar.setProgress((int) progress);
-            });
-        }
-
-
-    }*/
 
     @Override
     public void onSignUpPressed(String name, String email, String college, String address, String pincode, int age, String gender) {
@@ -229,17 +237,16 @@ public class NewProfileActivity extends AppCompatActivity implements WelcomeFrag
     }
 
     private void checkIfProfileExists() {
-
         DocumentReference docRef = db.collection("profile").document(uid);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
+                    if (Objects.requireNonNull(document).exists()) {
                         Log.d(TAG, "DocumentSnapshot data: " + document.getData());
                         profile = document.toObject(Profile.class);
-                        Log.d("NewProfileActivity","profile number"+profile.getProfileContact());
+                        Log.d("NewProfileActivity","profile number"+ Objects.requireNonNull(profile).getProfileContact());
                         Bundle bundle = new Bundle();
                         bundle.putString("name", profile.getProfileName());
                         bundle.putString("contact", profile.getProfileContact());

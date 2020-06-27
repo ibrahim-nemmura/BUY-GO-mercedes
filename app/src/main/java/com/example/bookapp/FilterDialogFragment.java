@@ -2,21 +2,20 @@ package com.example.bookapp;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import com.example.bookapp.R;
 import model.Book;
+import model.Book;
+
 import com.google.firebase.firestore.Query;
 
 import java.util.ArrayList;
@@ -277,7 +276,7 @@ public class FilterDialogFragment extends DialogFragment implements View.OnClick
                     case 3:return R.array.third_mech;
                     default:return R.array.forth_year;
                 }     }
-                default:return R.array.forth_year;
+            default:return R.array.forth_year;
 
         }
     }

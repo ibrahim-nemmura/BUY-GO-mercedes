@@ -8,7 +8,6 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 import model.Book;
 import viewmodel.AddActivityViewModel;
-import viewmodel.MainActivityViewModel;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -121,7 +120,7 @@ public class EbookActivity extends AppCompatActivity implements NameAndPic.NameF
 
     private void upload()
     {
-        db.collection("books").add(book).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        db.collection("products").add(book).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
                 Toast.makeText(getApplicationContext(),"Item Added!",Toast.LENGTH_SHORT);

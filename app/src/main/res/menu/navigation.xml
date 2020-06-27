@@ -14,7 +14,7 @@
     <item
         android:id="@+id/nav_ebook"
         android:icon="@drawable/ic_chat_black_24dp"
-        android:title="CHAT" />
+        android:title="Sohbet" />
 
 
 </menu>

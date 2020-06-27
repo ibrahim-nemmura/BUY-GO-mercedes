@@ -8,18 +8,15 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.telephony.AccessNetworkConstants;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -120,7 +117,7 @@ public class BookDetailActivity extends AppCompatActivity
         mFirestore = FirebaseFirestore.getInstance();
 
         // Get reference to the restaurant
-        mBookRef = mFirestore.collection("books").document(bookId);
+        mBookRef = mFirestore.collection("products").document(bookId);
 
 
     }
@@ -246,7 +243,7 @@ public class BookDetailActivity extends AppCompatActivity
     private void updateBookDetail() {
         newBook.setSold(true);
         soldOut.setVisibility(View.VISIBLE);
-        FirebaseFirestore.getInstance().collection("books").document(bookId).set(newBook).addOnSuccessListener(new OnSuccessListener<Void>() {
+        FirebaseFirestore.getInstance().collection("products").document(bookId).set(newBook).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
              Toast.makeText(getApplicationContext(),"Done!",Toast.LENGTH_LONG).show();

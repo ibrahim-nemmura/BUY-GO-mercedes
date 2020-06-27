@@ -28,6 +28,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:textSize="20sp"
+        android:fontFamily="@font/corporate"
         android:maxLines="1"
         android:ellipsize="end"
         tools:text="Book's Name" />
@@ -40,6 +41,7 @@
     <TextView
         android:id="@+id/bookYearSell"
         style="@style/AppTheme.Body1"
+        android:fontFamily="@font/corporate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/greySecondary"
@@ -50,6 +52,7 @@
         android:id="@+id/divider"
         style="@style/AppTheme.TextDivider"
         android:layout_width="wrap_content"
+        android:fontFamily="@font/corporate"
         android:layout_height="wrap_content"
         android:text="@string/divider_bullet" />
 
@@ -59,6 +62,7 @@
         style="@style/AppTheme.Body1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/corporate"
         android:textColor="@color/greySecondary"
         android:autoSizeTextType="uniform"
         android:maxLines="1"
@@ -70,6 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Publisher Name"
+        android:fontFamily="@font/corporate"
         android:maxLines="1"
         android:ellipsize="end"
         android:layout_marginStart="8dp"/>
@@ -79,10 +84,10 @@
     android:orientation="horizontal"
     android:layout_marginLeft="8dp">
     <TextView
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/RsTextSell"
+        android:fontFamily="@font/corporate"
         style="@style/AppTheme.Caption"
         android:text="Rs: "
         android:textSize="20sp"
@@ -92,6 +97,7 @@
         android:id="@+id/bookPriceSell"
         style="@style/AppTheme.Caption"
         android:layout_width="wrap_content"
+        android:fontFamily="@font/corporate"
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:textAlignment="textEnd"
@@ -117,7 +123,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete"
+            android:text="Sİl"
+            android:fontFamily="@font/corporate"
             android:id="@+id/deleteButtonSell"/>
 
 

@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.bookapp">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/icon_bird_64"
+        android:icon="@drawable/icon33"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/icon_bird_64"
+        android:roundIcon="@drawable/icon33"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChatActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".NewProfileActivity"
-            android:noHistory="true"/>
-        <activity android:name=".MessageActivity"
+
+        <activity
+            android:name=".ChatActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".NewProfileActivity"
+            android:noHistory="true" />
+        <activity
+            android:name=".MessageActivity"
             android:parentActivityName=".ChatActivity" />
-        <activity android:name=".SellActivity"
-            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".SellActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Register"
+            android:noHistory="true"
+            />
         <activity
             android:name=".MainActivity"
-
-
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,11 +42,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"
-            android:noHistory="true"/>
+        <activity
+            android:name=".LoginActivity"
+            android:noHistory="true" />
+
         <activity android:name=".AddItemActivity" />
-        <activity android:name=".BookDetailActivity"
-            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".BookDetailActivity"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

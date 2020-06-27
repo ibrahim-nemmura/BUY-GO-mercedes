@@ -9,6 +9,7 @@
     <TextView
         style="@style/AppTheme.Title"
         android:layout_width="wrap_content"
+        android:fontFamily="@font/corporate"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="@string/header_filters" />
@@ -133,6 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/cancel"
+            android:fontFamily="@font/corporate"
             android:textColor="@color/greySecondary"
             android:theme="@style/ThemeOverlay.FilterButton" />
 
@@ -142,6 +144,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/corporate"
             android:text="@string/apply"
             android:theme="@style/ThemeOverlay.FilterButton" />
 

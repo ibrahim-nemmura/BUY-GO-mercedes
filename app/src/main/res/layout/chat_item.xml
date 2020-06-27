@@ -29,6 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:ellipsize="end"
+            android:fontFamily="@font/corporate"
             android:maxLines="1"
             android:textSize="20sp" />
 
@@ -39,6 +40,7 @@
             android:layout_marginStart="20dp"
             android:ellipsize="end"
             android:maxLines="1"
+            android:fontFamily="@font/corporate"
             android:visibility="gone"
             android:maxWidth="150dp" />
     </LinearLayout>
@@ -47,6 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="12.45"
+            android:fontFamily="@font/corporate"
             android:singleLine="true"
             android:layout_gravity="bottom"
             android:gravity="end"

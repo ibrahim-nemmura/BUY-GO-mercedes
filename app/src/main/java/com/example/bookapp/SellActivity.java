@@ -94,7 +94,7 @@ public class SellActivity extends AppCompatActivity implements
         mEmptyView=findViewById(R.id.viewEmpty);
 
 
-        mQuery = mFirestore.collection("books").whereEqualTo("sellerContact",sharedPreferences.getString(NewProfileActivity.USERCONTACT,"unknown"))
+        mQuery = mFirestore.collection("products").whereEqualTo("sellerName",sharedPreferences.getString(NewProfileActivity.USERNAME,"unknown"))
                 .orderBy("price", Query.Direction.DESCENDING);
 
         // RecyclerView
@@ -154,8 +154,8 @@ public class SellActivity extends AppCompatActivity implements
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.sendFeedback:
-                //write code to get user feedback
+            case R.id.go_app:
+                //write code to move to GO app
                 break;
             case R.id.sign_out:
                 SharedPreferences.Editor editor=sharedPreferences.edit();
@@ -184,7 +184,7 @@ public class SellActivity extends AppCompatActivity implements
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                db.collection("books").document(del.getId())
+                db.collection("products").document(del.getId())
                         .delete()
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override

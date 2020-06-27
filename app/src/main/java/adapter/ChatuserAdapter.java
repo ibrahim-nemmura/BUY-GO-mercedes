@@ -18,10 +18,7 @@ import com.example.bookapp.R;
 
 import java.util.List;
 
-import model.Book;
 import model.Profile;
-
-import static com.example.bookapp.ProfileActivity.USERID;
 
 public class ChatuserAdapter extends RecyclerView.Adapter<ChatuserAdapter.ViewHolder> {
 

@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:title="+919607583080"
+        android:fontFamily="@font/corporate"
         android:titleTextColor="#FFFFFF" />
 
     <ScrollView
@@ -59,7 +60,8 @@
                     android:layout_centerInParent="true"
                     android:background="@drawable/photo_camera"
                     android:scaleX="2"
-                    android:scaleY="2" />
+                    android:scaleY="2"
+                    tools:ignore="OnClick" />
             </RelativeLayout>
 
             <EditText
@@ -69,6 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:hint="Name"
+                android:fontFamily="@font/corporate"
                 android:padding="15dp" />
 
             <LinearLayout
@@ -80,6 +83,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:padding="15dp"
+                    android:fontFamily="@font/corporate"
                     android:text="Age"
                     android:textSize="20sp" />
 
@@ -89,6 +93,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:maxLength="2"
+                    android:fontFamily="@font/corporate"
                     android:padding="15dp" />
 
 
@@ -111,6 +116,7 @@
                     android:layout_height="match_parent"
                     android:padding="15dp"
                     android:text="Pincode"
+                    android:fontFamily="@font/corporate"
                     android:textSize="20sp" />
 
                 <EditText
@@ -119,6 +125,7 @@
                     android:layout_height="match_parent"
                     android:inputType="number"
                     android:maxLength="6"
+                    android:fontFamily="@font/corporate"
                     android:padding="15dp" />
             </LinearLayout>
 
@@ -127,13 +134,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Room and Hostel"
+                android:fontFamily="@font/corporate"
                 android:padding="15dp" />
 
             <EditText
                 android:id="@+id/profileCollege"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="College"
+                android:hint="Position"
+                android:fontFamily="@font/corporate"
                 android:padding="15dp" />
 
 
@@ -150,7 +159,8 @@
             android:id="@+id/profileSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Save"
+            android:text="Kayıd et"
+            android:fontFamily="@font/corporate"
             android:theme="@style/ThemeOverlay.FilterButton" />
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

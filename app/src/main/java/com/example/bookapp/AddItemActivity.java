@@ -245,16 +245,16 @@ public class AddItemActivity extends AppCompatActivity {
 
                             photoUrl = uri.toString();
                             book.setPhoto(photoUrl);
-                            db.collection("books").add(book).addOnSuccessListener(documentReference -> {
+                            db.collection("products").add(book).addOnSuccessListener(documentReference -> {
                                 progressBar.setVisibility(ProgressBar.GONE);
-                                Toast.makeText(AddItemActivity.this.getApplicationContext(), "Item Added!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(AddItemActivity.this.getApplicationContext(), "Ürün eklendi!", Toast.LENGTH_SHORT).show();
                                 AddItemActivity.this.startActivity(new Intent(AddItemActivity.this, MainActivity.class));
                             });
 
                         });
                     }).addOnFailureListener(e -> {
                         progressBar.setVisibility(ProgressBar.GONE);
-                        Toast.makeText(AddItemActivity.this.getApplicationContext(), "Please try again!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddItemActivity.this.getApplicationContext(), "lütfen tekrar deneyin!", Toast.LENGTH_SHORT).show();
 
                     }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
                         @Override

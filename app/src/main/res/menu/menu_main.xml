@@ -2,11 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/sign_out"
-        android:title="Sign Out"
+        android:title="Çıkış Yap"
         android:icon="@drawable/logout"/>
     <item
-        android:id="@+id/sendFeedback"
-        android:title="Send Feedback"
-        android:icon="@drawable/feedback"/>
-
+        android:id="@+id/go_app"
+        android:title="Go App"
+        android:icon="@drawable/contact"/>
 </menu>

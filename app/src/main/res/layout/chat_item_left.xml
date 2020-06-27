@@ -11,10 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/background_left"
+        android:fontFamily="@font/corporate"
         android:text="hello"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
         android:padding="8dp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="14sp"/>
 
@@ -24,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:fontFamily="@font/corporate"
         android:layout_alignParentTop="@+id/receiver_message"
         android:layout_marginTop="10dp"
         android:background="@drawable/background_right"

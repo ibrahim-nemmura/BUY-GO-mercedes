@@ -44,12 +44,14 @@
 
         <TextView
             android:id="@+id/RsText"
+            android:fontFamily="@font/corporate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rs: "/>
 
         <TextView
             android:id="@+id/bookPrice"
+            android:fontFamily="@font/corporate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="textEnd"
@@ -66,25 +68,29 @@
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
+            android:fontFamily="@font/corporate"
             android:layout_height="wrap_content"
             android:text="1000"
             android:id="@+id/realPrice"/>
         <TextView
             android:layout_marginStart="10dp"
+            android:fontFamily="@font/corporate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/discountPer"
             android:text="10"/>
         <TextView
             android:layout_width="wrap_content"
+            android:fontFamily="@font/corporate"
             android:layout_height="wrap_content"
-            android:text="%OFF"
+            android:text="%indirim"
             />
 
     </LinearLayout>
 
     <TextView
         android:layout_marginStart="5dp"
+        android:fontFamily="@font/corporate"
         android:id="@+id/bookNameItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -100,6 +106,7 @@
 
         <TextView
             android:id="@+id/bookYear"
+            android:fontFamily="@font/corporate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/greySecondary"
@@ -108,11 +115,13 @@
 
         <TextView
             android:id="@+id/divider"
+            android:fontFamily="@font/corporate"
             style="@style/AppTheme.TextDivider"
             android:text="@string/divider_bullet" />
 
         <TextView
             android:id="@+id/bookBranch"
+            android:fontFamily="@font/corporate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/greySecondary"
@@ -124,6 +133,7 @@
 
     <TextView
         android:layout_marginStart="5dp"
+        android:fontFamily="@font/corporate"
         android:id="@+id/bookPublisher"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

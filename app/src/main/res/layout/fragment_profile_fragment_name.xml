@@ -25,6 +25,7 @@
             android:singleLine="true"
             android:background="@drawable/round_corner"
             android:hint="Name"
+            android:fontFamily="@font/corporate"
             android:maxLines="1"
             android:nextFocusDown="@id/profileGender"
             android:padding="10dp" />
@@ -52,6 +53,7 @@
                 android:layout_height="match_parent"
                 android:hint="Age"
                 android:inputType="number"
+                android:fontFamily="@font/corporate"
                 android:maxLength="2"
                 android:nextFocusForward="@id/profilePincode"
                 android:padding="5dp"
@@ -63,6 +65,7 @@
                 android:padding="5dp"
                 android:layout_width="wrap_content"
                 android:gravity="center"
+                android:fontFamily="@font/corporate"
                 android:textColor="@color/colorPrimary"
                 android:layout_height="match_parent"
                 android:text="Pincode" />
@@ -73,7 +76,7 @@
                 android:hint="000000"
                 android:inputType="number"
                 android:maxLength="6"
-
+                android:fontFamily="@font/corporate"
                 android:textSize="20dp"
                 android:nextFocusForward="@id/newProfileEmail"
                 android:id="@+id/profilePincode"
@@ -89,6 +92,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/round_corner"
             android:hint="Email"
+            android:fontFamily="@font/corporate"
             android:inputType="textEmailAddress"
             android:nextFocusDown="@id/newProfileCollege"
             android:padding="10dp" />
@@ -101,6 +105,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/round_corner"
             android:hint="College"
+            android:fontFamily="@font/corporate"
             android:maxLines="1"
             android:singleLine="true"
             android:nextFocusDown="@id/newProfileAddress"
@@ -113,6 +118,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/round_corner"
             android:hint="Address"
+            android:fontFamily="@font/corporate"
             android:singleLine="true"
             android:maxLines="1"
             android:nextFocusDown="@id/signupButton"
@@ -129,6 +135,8 @@
             android:backgroundTint="@color/colorPrimary"
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
+            android:fontFamily="@font/corporate"
+            android:textColor="@color/white"
             android:text="SIGN UP" />
 
     </LinearLayout>

@@ -77,6 +77,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Rs. "
+                    android:fontFamily="@font/corporate"
                     android:textColor="@android:color/black"
                     android:textSize="20sp" />
 
@@ -88,8 +89,20 @@
                     android:textAlignment="viewEnd"
                     android:textColor="@android:color/black"
                     android:textSize="30sp"
+                    android:fontFamily="@font/corporate"
                     android:textStyle="bold"
                     tools:text="999.99" />
+
+                <TextView
+                    android:id="@+id/try_tl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/corporate"
+                    android:paddingHorizontal="5dp"
+                    android:text="TRY"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/originalPrice"
@@ -97,6 +110,7 @@
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="10dp"
                     android:text="1000"
+                    android:fontFamily="@font/corporate"
                     android:textSize="20sp" />
 
                 <TextView
@@ -105,6 +119,7 @@
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="10dp"
                     android:text="15%off"
+                    android:fontFamily="@font/corporate"
                     android:textColor="@android:color/holo_green_light"
                     android:textSize="25sp" />
 
@@ -125,6 +140,7 @@
                     android:padding="2dp"
                     android:textColor="@android:color/black"
                     android:textSize="25sp"
+                    android:fontFamily="@font/corporate"
                     android:textStyle="bold"
                     tools:text="Some Restaurant" />
 
@@ -133,6 +149,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="2dp"
+                    android:fontFamily="@font/corporate"
                     android:textSize="20sp"
                     tools:text="Some Restaurant" />
 
@@ -147,12 +164,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
+                        android:fontFamily="@font/corporate"
                         tools:text="Italian" />
 
                     <TextView
                         android:id="@+id/divider"
                         style="@style/AppTheme.TextDivider"
                         android:text="@string/divider_bullet"
+                        android:fontFamily="@font/corporate"
                         android:textColor="@android:color/black"
                         android:textSize="24sp" />
 
@@ -161,6 +180,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
+                        android:fontFamily="@font/corporate"
                         tools:text="San Francisco" />
                 </LinearLayout>
 
@@ -175,6 +195,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
+                        android:fontFamily="@font/corporate"
                         tools:text="Publisher : " />
 
                     <TextView
@@ -182,6 +203,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
+                        android:fontFamily="@font/corporate"
                         tools:text="TechMax" />
                 </LinearLayout>
 
@@ -202,6 +224,7 @@
                     android:layout_height="wrap_content"
                     android:padding="2dp"
                     android:text="Comment: "
+                    android:fontFamily="@font/corporate"
                     android:textSize="20sp" />
 
                 <LinearLayout
@@ -215,6 +238,7 @@
                         android:text="@string/divider_bullet"
                         android:textColor="@android:color/black"
                         android:textSize="20sp"
+                        android:fontFamily="@font/corporate"
                         android:textStyle="bold" />
 
                     <TextView
@@ -222,6 +246,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="2dp"
+                        android:fontFamily="@font/corporate"
                         android:text="book is in good condition."
                         android:textSize="20sp" />
                 </LinearLayout>
@@ -271,6 +296,7 @@
                             android:layout_height="wrap_content"
                             android:paddingBottom="5dp"
                             android:text="Sachin Jha"
+                            android:fontFamily="@font/corporate"
                             android:textSize="20sp" />
 
                         <TextView
@@ -280,6 +306,7 @@
                             android:onClick="onCallButton"
                             android:paddingBottom="5dp"
                             android:text="9607583080"
+                            android:fontFamily="@font/corporate"
                             android:textSize="20sp"
                             android:textStyle="italic" />
                     </LinearLayout>
@@ -308,6 +335,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
                 android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/corporate"
                 android:backgroundTint="@color/colorPrimary"
                 android:background="@drawable/round_corner"
                 android:text="Chat" />
@@ -320,6 +349,8 @@
                 android:layout_weight="0.5"
                 android:backgroundTint="@color/colorPrimary"
                 android:background="@drawable/round_corner"
+                android:textColor="@color/white"
+                android:fontFamily="@font/corporate"
                 android:text="Call" />
         </LinearLayout>
 

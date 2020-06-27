@@ -2,7 +2,6 @@ package com.example.bookapp;
 
 import android.content.Context;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 
 
@@ -66,33 +65,15 @@ public class ProfileFragmentName extends Fragment {
         String name, email, college, address,pincode,gender;
         int age;
 
-        if (TextUtils.isEmpty(nameText.getText().toString())) {
-            nameText.setError("Empty");
-            return;
-        }else
-            name = nameText.getText().toString();
-        if (TextUtils.isEmpty(emailText.getText().toString())) {
-            emailText.setError("Empty");
-            return;
-        }else
-            email = emailText.getText().toString();
-        if (TextUtils.isEmpty(collegeText.getText().toString())) {
-            collegeText.setError("Empty");
-            return;
-        }else
-            college = collegeText.getText().toString();
-        if (TextUtils.isEmpty(addressText.getText().toString())) {
-            addressText.setError("Empty");
-            return;
-        }else
-            address = addressText.getText().toString();
+        name = nameText.getText().toString();
 
-        if (TextUtils.isEmpty(profilePincode.getText())) {
-            profilePincode.setError("Empty");
-            return;
-        } else {
-            pincode= profilePincode.getText().toString();
-        }
+        email = emailText.getText().toString();
+
+        college = collegeText.getText().toString();
+
+        address = addressText.getText().toString();
+
+        pincode= profilePincode.getText().toString();
 
         if (profileGender.getSelectedItemPosition() == 0) {
             gender="Male";
@@ -100,17 +81,10 @@ public class ProfileFragmentName extends Fragment {
             gender="Female";
         }
 
-        if (TextUtils.isEmpty(profileAge.getText())) {
-            profileAge.setError("Empty");
-            return;
-        } else {
-            age=Integer.parseInt(profileAge.getText().toString());
-        }
+        age=Integer.parseInt(profileAge.getText().toString());
 
-        if(mListener!=null){
+        mListener.onSignUpPressed(name,email,college,address,pincode,age,gender);
 
-            mListener.onSignUpPressed(name,email,college,address,pincode,age,gender);
-        }
     }
 
     @Override

@@ -8,7 +8,7 @@ import android.os.Bundle;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements FilterDialogFragm
     public RecyclerView mBookRecycler;
     public ViewGroup mEmptyView;
     private BookAdapter mAdapter;
+    private FirebaseAuth mA;
 
 
 
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements FilterDialogFragm
         mEmptyView=findViewById(R.id.viewEmpty);
 
 
-        mQuery = mFirestore.collection("books")
+        mQuery = mFirestore.collection("products")
                 .orderBy("price", Query.Direction.DESCENDING);
 
         // RecyclerView
@@ -161,7 +162,7 @@ public class MainActivity extends AppCompatActivity implements FilterDialogFragm
 
     public void onFilter(Filters filters) {
         // Construct query basic query
-        Query query = mFirestore.collection("books");
+        Query query = mFirestore.collection("products");
 
         // Branch (equality filter)
         if (filters.hasBranch()) {
@@ -254,7 +255,7 @@ public class MainActivity extends AppCompatActivity implements FilterDialogFragm
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.sendFeedback:
+            case R.id.go_app:
                 //write code to get user feedback
                 //startActivity(new Intent(this,NewProfileActivity.class));
                 break;
@@ -262,8 +263,10 @@ public class MainActivity extends AppCompatActivity implements FilterDialogFragm
                 SharedPreferences.Editor editor=sharedPreferences.edit();
                 editor.putBoolean(NewProfileActivity.LOGGEDIN,false);
                 editor.commit();
-                AuthUI.getInstance().signOut(this);
+                mA = FirebaseAuth.getInstance();
+                mA.signOut();
                 startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                finish();
                 break;
         }
         return super.onOptionsItemSelected(item);

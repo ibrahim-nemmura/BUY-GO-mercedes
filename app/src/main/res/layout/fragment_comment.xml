@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
+        android:fontFamily="@font/corporate"
         android:hint="Condition of item?" />
 
     <EditText
@@ -21,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
+        android:fontFamily="@font/corporate"
         android:hint="How old?" />
 
     <EditText
@@ -28,6 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
+        android:fontFamily="@font/corporate"
         android:hint="Other comments..." />
 
 
@@ -44,6 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/cancel"
+            android:fontFamily="@font/corporate"
             android:textColor="@color/greySecondary"
             android:theme="@style/ThemeOverlay.FilterButton" />
 
@@ -52,7 +56,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Add"
+            android:text="Ekle"
+            android:fontFamily="@font/corporate"
             android:theme="@style/ThemeOverlay.FilterButton" />
     </LinearLayout>
 

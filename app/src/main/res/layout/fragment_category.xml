@@ -12,6 +12,7 @@
 
     <TextView
         style="@style/AppTheme.Title"
+        android:fontFamily="@font/corporate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -93,11 +94,13 @@
             android:layout_height="wrap_content"
             android:text="back"
             android:layout_weight="0.5"
+            android:fontFamily="@font/corporate"
             android:id="@+id/backNameAndPic" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="next"
+            android:fontFamily="@font/corporate"
             android:layout_weight="0.5"
             android:id="@+id/nextComment"/>
     </LinearLayout>

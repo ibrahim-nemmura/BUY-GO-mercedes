@@ -1,16 +1,16 @@
 <resources>
-    <string name="app_name">Book Bird</string>
-    <string name="title_buy">BUY</string>
-    <string name="title_sell">SELL</string>
+    <string name="app_name">Buy-Go</string>
+    <string name="title_buy">Satın Al</string>
+    <string name="title_sell">İlanlarım</string>
 
 
     <!-- added from here -->
 
 
-    <string name="value_any_branch">All Branch</string>
-    <string name="value_any_year">All Years</string>
-    <string name="value_any_subject">All Subjects</string>
-    <string name="value_any_price">All Price Range</string>
+    <string name="value_any_branch">Tüm Bölümler</string>
+    <string name="value_any_year">Tüm Yıllar</string>
+    <string name="value_any_subject">Tüm Dersler</string>
+    <string name="value_any_price">Tüm Fiyat Aralıkları</string>
 
     <string name="price_1">0 - 200</string>
     <string name="price_2">200 - 500</string>
@@ -18,25 +18,49 @@
     <string name="price_4">1000 and above</string>
 
 
-    <string name="all_books">All Items</string>
-    <string name="header_filters">Filter</string>
+    <string name="all_books">Tüm Ürünler</string>
+    <string name="header_filters">Filtreleme</string>
 
 
-    <string name="sort_by_price_lth">Price low to high</string>
-    <string name="sort_by_price_htl">Price high to low</string>
+    <string name="sort_by_price_lth">düşükten yükseğe fiyatlar</string>
+    <string name="sort_by_price_htl">yükseten düşüğe fiyatlar</string>
 
-    <string name="sorted_by_price_lth">sorted by price low to high</string>
-    <string name="sorted_by_price_htl">sorted by price high to low</string>
+    <string name="sorted_by_price_lth">fiyata göre düşükten yükseğe</string>
+    <string name="sorted_by_price_htl">fiyata göre yüksekten düşüğe</string>
+    ///////////////////////////
+
+    <string name="buy_go">BUY-GO</string>
+    <string name="best_or_never">En iyisi ya da hiç</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="pass">Şifre</string>
+    <string name="login">Gir</string>
+    <string name="or">ya da</string>
+    <string name="with_go">ile devam et</string>
+    <string name="you_not_member">Hesabınız yok mu?</string>
+    <string name="register">Kayıt Ol</string>
+    <string name="name">İsim</string>
+    <string name="surname">Soyisim</string>
+    <string name="register_now">Kayıt oluştur</string>
+    <string name="logout">Çıkış yap</string>
+    <string name="profile_image">profil resmi</string>
+    <string name="profile_name">NAME</string>
+    <string name="profile_mail">E-MAIL</string>
+    <string name="profile_id">ID</string>
+    <string name="signed_in_fmt" />
+    <string name="signed_out" />
+    <string name="wlc">Merhaba</string>
+    ///////////////////////////////////////////bitti
+
 
     <string name="divider_bullet">•</string>
-    <string name="apply">Apply</string>
-    <string name="cancel">Cancel</string>
-    <string name="message_no_results">Oops, couldn\'t find any results\nthat matched your filter</string>
+    <string name="apply">filtrele</string>
+    <string name="cancel">iptal</string>
+    <string name="message_no_results">Hata! Filtrenizle eşleşen sonuç bulunamadı \</string>
 
 
-    <string name="all">All</string>
+    <string name="all">Hepsi</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="terms_and_condition_applied">Terms and condition applied.</string>
+    <string name="terms_and_condition_applied">Şartlar ve koşullar uygulandı.</string>
 
 
     <string-array name="branch">
@@ -241,8 +265,8 @@
         <item>Utilization of Electrical Energy</item>
     </string-array>
     <string-array name="gender">
-        <item>Male</item>
-        <item>Female</item>
+        <item>Bay</item>
+        <item>Bayan</item>
     </string-array>
 
 

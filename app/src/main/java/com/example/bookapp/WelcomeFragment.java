@@ -1,7 +1,6 @@
 package com.example.bookapp;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,10 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
 
 
 /**
@@ -46,7 +42,7 @@ public class WelcomeFragment extends Fragment {
         welcomeNumber=view.findViewById(R.id.welcomeNumber);
         letsGo=view.findViewById(R.id.letsGoButton);
         if (getArguments()!=null) {
-            welcomeMessage.setText(TextUtils.concat("Welcome ", getArguments().getString("name")));
+            welcomeMessage.setText(TextUtils.concat("Tekrar Hoş Geldiniz ", getArguments().getString("name")));
             welcomeNumber.setText(getArguments().getString("contact"));
         }
 

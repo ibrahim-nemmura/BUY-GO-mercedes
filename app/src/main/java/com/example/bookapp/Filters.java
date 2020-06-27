@@ -7,7 +7,6 @@ import android.util.Log;
 import com.example.bookapp.R;
 import model.Book;
 
-import com.google.api.LogDescriptor;
 import com.google.firebase.firestore.Query;
 
 /**
