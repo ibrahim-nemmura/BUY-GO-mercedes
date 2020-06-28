@@ -1,4 +1,4 @@
-package com.example.bookapp;
+package com.example.buygo;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import model.Book;
 import model.Book;
 
 import com.google.firebase.firestore.Query;

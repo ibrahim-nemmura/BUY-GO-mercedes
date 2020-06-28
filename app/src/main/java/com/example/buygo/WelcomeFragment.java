@@ -1,4 +1,4 @@
-package com.example.bookapp;
+package com.example.buygo;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,18 +10,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 
 
-public class PaymentFragment extends Fragment {
+/**
+ * A simple {@link Fragment} subclass.
+ * Activities that contain this fragment must implement the
+ * {@link WelcomeFragment.OnWelcomeFragmentInteractionListener} interface
+ * to handle interaction events.
+ */
+public class WelcomeFragment extends Fragment {
 
-    private EditText upi;
-    private Button saveUpi;
-    private String upiId;
 
-    private OnSaveUpiButtonPressedListener mListener;
+    private TextView welcomeMessage;
+    private TextView welcomeNumber;
+    private Button letsGo;
+    private OnWelcomeFragmentInteractionListener mListener;
 
-    public PaymentFragment() {
+    public WelcomeFragment() {
         // Required empty public constructor
     }
 
@@ -29,38 +35,33 @@ public class PaymentFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view=inflater.inflate(R.layout.fragment_welcome, container, false);
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_payment, container, false);
-        upi = view.findViewById(R.id.upiId);
-        saveUpi = view.findViewById(R.id.saveUPI);
-        saveUpi.setOnClickListener(new View.OnClickListener() {
+
+        welcomeMessage=view.findViewById(R.id.welcomeMessage);
+        welcomeNumber=view.findViewById(R.id.welcomeNumber);
+        letsGo=view.findViewById(R.id.letsGoButton);
+        if (getArguments()!=null) {
+            welcomeMessage.setText(TextUtils.concat("Tekrar Hoş Geldiniz ", getArguments().getString("name")));
+            welcomeNumber.setText(getArguments().getString("contact"));
+        }
+
+        letsGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                upiId=upi.getText().toString().trim();
-                String reg="^[\\w\\.\\-_]{3,}@[a-zA-Z]{3,}";
-                if(!TextUtils.isEmpty(upiId)){
-                    if (upiId.matches(reg)){
-                        upi.setEnabled(false);
-                        mListener.onSaveUpiButtonPressed(upiId);
-                    }else
-                    {
-                        upi.setError("Invalid UPI");
-                    }
-                }
-                else
-                    upi.setError("Empty");
+                mListener.onLetsGoButtonPressed();
             }
         });
-
-
         return view;
     }
+
+
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnSaveUpiButtonPressedListener) {
-            mListener = (OnSaveUpiButtonPressedListener) context;
+        if (context instanceof OnWelcomeFragmentInteractionListener) {
+            mListener = (OnWelcomeFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
@@ -83,8 +84,8 @@ public class PaymentFragment extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
-    public interface OnSaveUpiButtonPressedListener {
+    public interface OnWelcomeFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onSaveUpiButtonPressed(String upiId);
+        void onLetsGoButtonPressed();
     }
 }

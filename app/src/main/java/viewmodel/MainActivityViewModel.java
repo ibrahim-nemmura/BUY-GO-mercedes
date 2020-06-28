@@ -3,7 +3,7 @@ package viewmodel;
 import androidx.lifecycle.ViewModel;
 
 
-import com.example.bookapp.Filters;
+import com.example.buygo.Filters;
 
 
 public class MainActivityViewModel extends ViewModel {

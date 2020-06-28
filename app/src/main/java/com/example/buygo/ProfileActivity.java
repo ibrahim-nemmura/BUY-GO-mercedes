@@ -1,4 +1,4 @@
-package com.example.bookapp;
+package com.example.buygo;
 
 import androidx.annotation.Nullable;
 import model.Profile;

@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import model.ChatMessage;
 
-import com.example.bookapp.R;
+import com.example.buygo.R;
 import com.google.firebase.database.DatabaseReference;
 
 import java.util.List;

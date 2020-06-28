@@ -1,4 +1,4 @@
-package com.example.bookapp;
+package com.example.buygo;
 
 import android.Manifest;
 import android.content.Context;

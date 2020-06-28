@@ -1,4 +1,4 @@
-package com.example.bookapp;
+package com.example.buygo;
 
 
 import android.os.Bundle;
@@ -9,22 +9,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.google.firebase.firestore.FirebaseFirestore;
-
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class buy extends Fragment {
+public class rent extends Fragment {
 
 
-    public buy() {
+    public rent() {
         // Required empty public constructor
-    }
-
-    public void displayItems(){
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-
     }
 
 
@@ -32,7 +25,7 @@ public class buy extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_buy, container, false);
+        return inflater.inflate(R.layout.fragment_rent, container, false);
     }
 
 }

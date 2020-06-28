@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.bookapp">
+    package="com.example.buygo">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -16,23 +16,23 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".ChatActivity"
-            android:parentActivityName=".MainActivity" />
+            android:name="com.example.buygo.ChatActivity"
+            android:parentActivityName="com.example.buygo.MainActivity" />
         <activity
-            android:name=".NewProfileActivity"
+            android:name="com.example.buygo.NewProfileActivity"
             android:noHistory="true" />
         <activity
-            android:name=".MessageActivity"
-            android:parentActivityName=".ChatActivity" />
+            android:name="com.example.buygo.MessageActivity"
+            android:parentActivityName="com.example.buygo.ChatActivity" />
         <activity
-            android:name=".SellActivity"
-            android:parentActivityName=".MainActivity" />
+            android:name="com.example.buygo.SellActivity"
+            android:parentActivityName="com.example.buygo.MainActivity" />
         <activity
-            android:name=".Register"
+            android:name="com.example.buygo.Register"
             android:noHistory="true"
             />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.buygo.MainActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name">
             <intent-filter>
@@ -43,14 +43,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name="com.example.buygo.LoginActivity"
             android:noHistory="true" />
 
-        <activity android:name=".AddItemActivity" />
+        <activity android:name="com.example.buygo.AddItemActivity" />
 
         <activity
-            android:name=".BookDetailActivity"
-            android:parentActivityName=".MainActivity" />
+            android:name="com.example.buygo.BookDetailActivity"
+            android:parentActivityName="com.example.buygo.MainActivity" />
     </application>
 
 </manifest>

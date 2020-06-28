@@ -1,10 +1,10 @@
-package com.example.bookapp;
+package com.example.buygo;
 
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.example.bookapp.R;
+import com.example.buygo.R;
 import model.Book;
 
 import com.google.firebase.firestore.Query;
