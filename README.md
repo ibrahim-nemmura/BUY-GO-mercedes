@@ -50,6 +50,6 @@ Created as a group project in Turkish German University. This app is useful for 
 5. Stack overflow
 
 ## Contributors
-- İbrahim Nemmura
+- İbrahim Nemmura ([@ibrahim](https://github.com/ibrahim-nemmura/))
 - Cabbar Şerif
 - Hasan Güzelmansur
