@@ -23,19 +23,19 @@ Created as a group project in Turkish German University. This app is useful for 
 
 ## Cool features:
 
-1. mail/password login for easy authentication on Firebase
-2. Google account login for easy authentication
-3. Simple 2 column grid layout for item selection
-4. Filter and sort by options for easy sorting of items
+ - [x]  mail/password login for easy authentication on Firebase
+ - [x]  Google account login for easy authentication
+ - [x]  Simple 2 column grid layout for item selection
+ - [x]  Filter and sort by options for easy sorting of items
     1. model-wise selection of products
     2. usage-wise selection
     3. price-wise selection and more
-5. Chatting options within the app for direct chatting with seller
-6. Google pay option for easy payment
-7. Easy adding of item for selling
-8. Category-wise selection for easy addition of items
-9. Easy delete options for removing sold items
-10. Nice profile view with profile picture
+ - [x]  Chatting options within the app for direct chatting with seller
+ - [x]  Google pay option for easy payment
+ - [x]  Easy adding of item for selling
+ - [x]  Category-wise selection for easy addition of items
+ - [x]  Easy delete options for removing sold items
+ - [x]  Nice profile view with profile picture
 
 ## Other features to add:
 1. Applying machine learning for recommendations
