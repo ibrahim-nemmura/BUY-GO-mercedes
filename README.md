@@ -1,20 +1,21 @@
-# Bookapp
-Created as a group project in college. This app is useful for small college environment where students can share books, utilities and other tools among them and save money and reuse resources. 
+# BUY-GO-mercedes app
+Created as a group project in Turkish German University. This app is useful for small company environment where employees can share products, utilities and other tools among them and save money and reuse resources. 
 
 ## Cool features:
 
-1. OTP verified login for easy authentication
-2. Simple 2 column grid layout for item selection
-3. Filter and sort by options for easy sorting of items
-    1. year-wise selection of books
-    2. subject-wise selection
-    3. dept-wise selection and more
-4. Chatting options within the app for direct chatting with seller
-5. Google pay option for easy payment
-6. Easy adding of item for selling
-7. Category-wise selection for easy addition of items
-8. Easy delete options for removing sold items
-9. Nice profile view with profile picture
+1. mail/password login for easy authentication on Firebase
+2. Google account login for easy authentication
+3. Simple 2 column grid layout for item selection
+4. Filter and sort by options for easy sorting of items
+    1. model-wise selection of products
+    2. usage-wise selection
+    3. price-wise selection and more
+5. Chatting options within the app for direct chatting with seller
+6. Google pay option for easy payment
+7. Easy adding of item for selling
+8. Category-wise selection for easy addition of items
+9. Easy delete options for removing sold items
+10. Nice profile view with profile picture
 
 ## Other features to add:
 1. Applying machine learning for recommendations
@@ -29,6 +30,6 @@ Created as a group project in college. This app is useful for small college envi
 5. Stack overflow
 
 ## Contributors
-- Sachin Kumar Jha
-- Rahul Kumar
-- Aditya Raj
+- İbrahim Nemmura
+- Cabbar Şerif
+- Hasan Güzelmansur
