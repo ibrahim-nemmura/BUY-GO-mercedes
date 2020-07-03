@@ -1,9 +1,8 @@
 # BUY-GO-mercedes app
 Created as a group project in Turkish German University. This app is useful for small company environment where employees can share products, utilities and other tools among them and save money and reuse resources. 
 
-## prototype video:
-[![IMAGE ALT TEXT HERE](https://github.com/ibrahim-nemmura/BUY-GO-mercedes/blob/master/screenshots/thumbnail.jpg)](https://www.youtube.com/watch?v=ygwEicTWcuM&t=168s&feature=youtu.be "prototype video of BUY-GO android app")
-</object>
+### prototype video:
+[![IMAGE ALT TEXT](https://github.com/ibrahim-nemmura/BUY-GO-mercedes/blob/master/screenshots/thumbnail.jpg)](https://www.youtube.com/watch?v=ygwEicTWcuM&t=168s&feature=youtu.be "prototype video of BUY-GO android app")
 
 ## Screenshots:
 <p align="center">
