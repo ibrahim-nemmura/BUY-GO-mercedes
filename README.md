@@ -1,4 +1,10 @@
 # BUY-GO-mercedes app
+[![Build Status](https://travis-ci.org/fossasia/pslab-android.svg?branch=development)](https://travis-ci.org/fossasia/pslab-android)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dd728d91bb5743ff916c16c1251f8dd5)](https://www.codacy.com/app/praveenkumar103/pslab-android?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fossasia/pslab-android&amp;utm_campaign=Badge_Grade)
+![Minimum API Level](https://img.shields.io/badge/Min%20API%20Level-24-green)
+![Maximum API Level](https://img.shields.io/badge/Max%20API%20Level-28-orange)
+![GitHub repo size](https://img.shields.io/github/repo-size/fossasia/pslab-android)
+
 Created as a group project in Turkish German University. This app is useful for small company environment where employees can share products, utilities and other tools among them and save money and reuse resources. 
 
 ### prototype video:
